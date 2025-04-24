@@ -54,7 +54,7 @@ plugins:
 author:
   name   : "Gaia Gaudenzi"
   avatar : "/assets/images/bio-photo.png"
-  bio    : "Hi all! I am a Research Assistant wannabe Development Economist. Welcome to my website!"
+  bio    : "Hi all! I am PhD student at University of Maryland!"
   links:
     - label: "X"
       icon: "fab fa-x-twitter fa-fw"
