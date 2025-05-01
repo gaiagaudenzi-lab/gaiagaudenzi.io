@@ -71,6 +71,7 @@ defaults:
     values:
       layout: single
       author_profile: true
+  google_site_verification: l_z4pt5dVBGf0uewwsyGWC-u-BvX-duoqTbLn9RPAcw
 
 category_archive:
   type: liquid
