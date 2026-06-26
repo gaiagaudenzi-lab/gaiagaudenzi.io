@@ -11,48 +11,63 @@
    Custom overrides for Gaia Gaudenzi's website
    ============================================================ */
 
+/* Google Fonts import - Source Sans 3 (formerly Source Sans Pro) */
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap');
+
 /* 1. Smaller base font size */
 html {
-    font-size: 13px; /* default is 16px; reduce to make text smaller */
+     font-size: 13px; /* default is 16px; reduce to make text smaller */
+}
+
+/* Apply Source Sans 3 as the main body font */
+body,
+.page__content,
+.author__bio,
+.author__name,
+.nav__list,
+.greedy-nav a,
+p, li, span, div, a {
+     font-family: 'Source Sans 3', 'Source Sans Pro', sans-serif !important;
 }
 
 /* 2. Bigger profile/avatar picture */
 .author__avatar img {
-    max-width: 180px !important; /* default is ~110px */
-    border-radius: 50%;
+     max-width: 180px !important; /* default is ~110px */
+     border-radius: 50%;
 }
 
 .author__avatar {
-    display: table-cell;
-    vertical-align: top;
-    width: 180px;
-    height: 180px;
+     display: table-cell;
+     vertical-align: top;
+     width: 180px;
+     height: 180px;
 }
 
 /* 3. Smaller/slimmer masthead (top navigation bar) */
 .masthead {
-    padding-top: 0.4em !important;
-    padding-bottom: 0.4em !important;
-    min-height: unset !important;
+     padding-top: 0.4em !important;
+     padding-bottom: 0.4em !important;
+     min-height: unset !important;
 }
 
 .masthead__inner-wrap {
-    padding: 0.4em 1em !important;
+     padding: 0.4em 1em !important;
 }
 
 .site-logo img {
-    max-height: 1.5rem !important;
+     max-height: 1.5rem !important;
 }
 
 .greedy-nav .site-title {
-    line-height: 1.8rem !important;
-    padding: 0.3rem 0 !important;
+     line-height: 1.8rem !important;
+     padding: 0.3rem 0 !important;
+     font-family: 'Source Sans 3', 'Source Sans Pro', sans-serif !important;
 }
 
 .greedy-nav a {
-    padding: 0.4rem 0 !important;
+     padding: 0.4rem 0 !important;
 }
 
 .greedy-nav__toggle {
-    height: 2rem !important;
+     height: 2rem !important;
 }
