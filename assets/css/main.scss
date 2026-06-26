@@ -1,0 +1,58 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+
+@charset "utf-8";
+
+@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
+@import "minimal-mistakes"; // main partials
+
+/* ============================================================
+   Custom overrides for Gaia Gaudenzi's website
+   ============================================================ */
+
+/* 1. Smaller base font size */
+html {
+    font-size: 13px; /* default is 16px; reduce to make text smaller */
+}
+
+/* 2. Bigger profile/avatar picture */
+.author__avatar img {
+    max-width: 180px !important; /* default is ~110px */
+    border-radius: 50%;
+}
+
+.author__avatar {
+    display: table-cell;
+    vertical-align: top;
+    width: 180px;
+    height: 180px;
+}
+
+/* 3. Smaller/slimmer masthead (top navigation bar) */
+.masthead {
+    padding-top: 0.4em !important;
+    padding-bottom: 0.4em !important;
+    min-height: unset !important;
+}
+
+.masthead__inner-wrap {
+    padding: 0.4em 1em !important;
+}
+
+.site-logo img {
+    max-height: 1.5rem !important;
+}
+
+.greedy-nav .site-title {
+    line-height: 1.8rem !important;
+    padding: 0.3rem 0 !important;
+}
+
+.greedy-nav a {
+    padding: 0.4rem 0 !important;
+}
+
+.greedy-nav__toggle {
+    height: 2rem !important;
+}
