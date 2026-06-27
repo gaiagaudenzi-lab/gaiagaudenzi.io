@@ -1,0 +1,114 @@
+---
+layout: base
+---
+<style>
+.toc-wrapper {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 0;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+  align-items: start;
+}
+.toc-sidebar {
+  position: sticky;
+  top: 24px;
+  padding: 40px 24px 40px 0;
+  border-right: 1px solid var(--border);
+  max-height: calc(100vh - 48px);
+  overflow-y: auto;
+}
+.toc-sidebar::-webkit-scrollbar { width: 3px; }
+.toc-sidebar::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
+.toc-label {
+  font-family: var(--font);
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--light-gray);
+  margin-bottom: 16px;
+  display: block;
+}
+.toc-nav { list-style: none; }
+.toc-nav li { margin-bottom: 2px; }
+.toc-nav a {
+  font-family: var(--font);
+  font-size: 13px;
+  font-weight: 300;
+  color: var(--mid-gray);
+  text-decoration: none;
+  display: block;
+  padding: 4px 8px;
+  border-radius: 3px;
+  transition: color 0.2s, background 0.2s;
+  line-height: 1.4;
+}
+.toc-nav a:hover { color: var(--magenta); background: #fdf5fc; text-decoration: none; }
+.toc-nav a.active { color: var(--magenta); font-weight: 400; }
+.toc-nav li.toc-h1 > a { font-weight: 400; color: var(--near-black); margin-top: 8px; }
+.toc-nav li.toc-h1:first-child > a { margin-top: 0; }
+.toc-nav li.toc-h2 > a { padding-left: 20px; font-size: 12px; }
+.toc-content { padding: 56px 0 64px 40px; min-width: 0; }
+.toc-content .page-body img {
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  display: block;
+  margin: 16px auto;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+}
+.toc-content .page-body img[alt="graph_errorbar"] {
+  max-width: 480px;
+}
+@media (max-width: 768px) {
+  .toc-wrapper { grid-template-columns: 1fr; padding: 0 20px; }
+  .toc-sidebar { display: none; }
+  .toc-content { padding: 40px 0; }
+}
+</style>
+
+<div class="toc-wrapper">
+  <aside class="toc-sidebar">
+    <span class="toc-label">Contents</span>
+    <ul class="toc-nav" id="toc-nav"></ul>
+  </aside>
+  <div class="toc-content">
+    {% if page.title %}<h1 class="page-title">{{ page.title }}</h1><div class="page-divider"></div>{% endif %}
+    <div class="page-body">{{ content }}</div>
+  </div>
+</div>
+
+<script>
+(function() {
+  var content = document.querySelector('.page-body');
+  var nav = document.getElementById('toc-nav');
+  if (!content || !nav) return;
+  var headings = content.querySelectorAll('h1, h2');
+  headings.forEach(function(h) {
+    if (!h.id) {
+      h.id = h.textContent.trim().toLowerCase().replace(/[^a-z0-9 -]/g, '').replace(/ +/g, '-');
+    }
+    var li = document.createElement('li');
+    li.className = h.tagName === 'H1' ? 'toc-h1' : 'toc-h2';
+    var a = document.createElement('a');
+    a.href = '#' + h.id;
+    a.textContent = h.textContent.trim();
+    li.appendChild(a);
+    nav.appendChild(li);
+  });
+  var links = nav.querySelectorAll('a');
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        links.forEach(function(l) { l.classList.remove('active'); });
+        var active = nav.querySelector('a[href="#' + entry.target.id + '"]');
+        if (active) active.classList.add('active');
+      }
+    });
+  }, { rootMargin: '-10% 0px -80% 0px' });
+  content.querySelectorAll('h1, h2').forEach(function(h) { observer.observe(h); });
+})();
+</script>
