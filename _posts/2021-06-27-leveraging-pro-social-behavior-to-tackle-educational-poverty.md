@@ -2,7 +2,7 @@
 layout: post
 title: "Leveraging Pro-Social Behavior for Public Service Delivery"
 date: 2021-06-27
-image: /assets/images/BD2.jpg
+image: /assets/images/b2.jpg
 ---
 
 The COVID-19 pandemic widened pre-existing educational inequalities. School closures hit hardest the students already failing to meet minimum proficiency levels — those from socioeconomically disadvantaged backgrounds. The question of how to intervene effectively, and at scale, remains open.
