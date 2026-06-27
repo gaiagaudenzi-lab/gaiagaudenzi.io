@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gaia Gaudenzi</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,600;1,300;1,600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: #f2f0eb;
+  color: #1a1a1a;
+  font-family: 'Inter', sans-serif;
+  min-height: 100vh;
+}
+
+/* ── NAV ── */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2.2rem 4rem;
+}
+.nav-name {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  color: #1a1a1a;
+  text-transform: uppercase;
+}
+.nav-links {
+  display: flex;
+  gap: 2.5rem;
+}
+.nav-links a {
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #888;
+  font-weight: 400;
+  transition: color 0.2s;
+}
+.nav-links a:hover,
+.nav-links a.active { color: #2a5c45; }
+
+/* ── HERO ── */
+.hero {
+  padding: 5rem 4rem 4rem;
+  max-width: 860px;
+}
+.hero-label {
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #2a5c45;
+  font-weight: 500;
+  margin-bottom: 1.8rem;
+}
+.hero h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(3.5rem, 6vw, 5.5rem);
+  font-weight: 300;
+  line-height: 1.05;
+  letter-spacing: -0.01em;
+  color: #1a1a1a;
+  margin-bottom: 2.5rem;
+}
+.hero h1 em {
+  font-style: italic;
+  color: #2a5c45;
+}
+.teal-line {
+  width: 32px;
+  height: 1.5px;
+  background: #2a5c45;
+  margin-bottom: 2rem;
+}
+.hero-bio {
+  font-size: 1rem;
+  line-height: 1.85;
+  color: #444;
+  font-weight: 300;
+  max-width: 560px;
+  margin-bottom: 3rem;
+}
+
+/* ── CONTACT ROW ── */
+.contact-row {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-bottom: 6rem;
+}
+.contact-row a {
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  color: #2a5c45;
+  text-decoration: none;
+  font-weight: 400;
+  border-bottom: 1px solid transparent;
+  padding-bottom: 1px;
+}
+.contact-row a:hover {
+  border-bottom-color: #2a5c45;
+}
+
+/* ── SECTION ── */
+.section {
+  padding: 0 4rem;
+  max-width: 860px;
+  margin-bottom: 5rem;
+}
+.section-label {
+  font-size: 0.6rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #999;
+  font-weight: 500;
+  margin-bottom: 2rem;
+}
+
+/* ── PAPER ── */
+.paper {
+  padding: 1.8rem 0;
+  border-top: 1px solid #ddd8ce;
+}
+.paper:last-child {
+  border-bottom: 1px solid #ddd8ce;
+}
+.paper-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  line-height: 1.35;
+  margin-bottom: 0.4rem;
+}
+.paper-meta {
+  font-size: 0.75rem;
+  color: #999;
+  font-weight: 300;
+  letter-spacing: 0.02em;
+}
+.paper-status {
+  display: inline-block;
+  margin-top: 0.6rem;
+  font-size: 0.62rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #2a5c45;
+  font-weight: 500;
+}
+
+/* ── FIELDS ── */
+.fields {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+.field {
+  font-size: 0.72rem;
+  color: #555;
+  font-weight: 300;
+  letter-spacing: 0.04em;
+  padding: 0.4rem 0;
+  border-bottom: 1px solid #ccc;
+  padding-right: 0.8rem;
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-name">Gaia Gaudenzi</div>
+  <div class="nav-links">
+    <a href="#" class="active">About</a>
+    <a href="#">Research</a>
+    <a href="#">CV</a>
+    <a href="#">Blog</a>
+    <a href="#">Resources</a>
+  </div>
+</nav>
+
+<div class="hero">
+  <div class="hero-label">University of Maryland &nbsp;&middot;&nbsp; PhD Candidate</div>
+  <h1>Development<br>economist working on<br><em>gender and poverty.</em></h1>
+  <div class="teal-line"></div>
+  <p class="hero-bio">
+    Pre-doctoral RA at the Becker Friedman Institute (UChicago),
+    RA at LEAP (Bocconi), and BRAC Bangladesh.
+    Interested in development economics and behavioral economics.
+  </p>
+  <div class="contact-row">
+    <a href="#">Email</a>
+    <a href="#">Twitter</a>
+    <a href="#">GitHub</a>
+    <a href="#">CV &rarr;</a>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-label">Working Papers</div>
+
+  <div class="paper">
+    <div class="paper-title">Body weight signaling and labor market outcomes: a gender extension</div>
+    <div class="paper-meta">with [coauthor] &middot; 2025</div>
+    <div class="paper-status">Working paper</div>
+  </div>
+
+  <div class="paper">
+    <div class="paper-title">Behavioral responses to conditional cash transfers in rural Bangladesh</div>
+    <div class="paper-meta">with [coauthor] &middot; 2024</div>
+    <div class="paper-status">In progress</div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-label">Research Fields</div>
+  <div class="fields">
+    <span class="field">Development economics</span>
+    <span class="field">Behavioral economics</span>
+    <span class="field">Gender</span>
+    <span class="field">Field experiments</span>
+  </div>
+</div>
+
+</body>
+</html>
