@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mockup 3 - The Grid</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Cormorant+Garamond:wght@600;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body { background: #f4f4f2; color: #111; font-family: 'Inter', sans-serif; min-height: 100vh; padding: 2rem; }
+.grid { display: grid; grid-template-columns: 1fr 1fr 1fr; grid-template-rows: auto auto auto; gap: 1px; background: #ccc; border: 1px solid #ccc; max-width: 1100px; margin: 0 auto; }
+.cell { background: #fff; padding: 2rem; }
+.cell-teal { background: #008080; color: #fff; }
+.cell-dark { background: #111; color: #fff; }
+.cell-span2 { grid-column: span 2; }
+.cell-span3 { grid-column: span 3; }
+.label { font-size: 0.6rem; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 600; opacity: 0.6; margin-bottom: 0.5rem; }
+.label-teal { color: #008080; opacity: 1; }
+h1 { font-family: 'Cormorant Garamond', serif; font-size: 3.5rem; font-weight: 700; line-height: 1; }
+h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-weight: 600; line-height: 1.2; margin-bottom: 0.75rem; }
+p { font-size: 0.85rem; line-height: 1.7; color: #555; }
+.cell-dark p, .cell-teal p { color: rgba(255,255,255,0.75); }
+.cell-dark h2, .cell-teal h2 { color: #fff; }
+nav { display: flex; gap: 1.5rem; }
+nav a { font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; text-decoration: none; color: rgba(255,255,255,0.7); font-weight: 500; }
+nav a:hover { color: #fff; }
+.name-big { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; font-weight: 700; letter-spacing: 0.05em; }
+.field-tag { display: inline-block; border: 1px solid #008080; color: #008080; font-size: 0.65rem; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.2rem 0.5rem; margin: 0.15rem; font-weight: 500; }
+a.link { color: #008080; text-decoration: none; font-size: 0.8rem; display: block; margin-bottom: 0.2rem; }
+.big-num { font-family: 'Cormorant Garamond', serif; font-size: 4rem; font-weight: 700; color: #008080; line-height: 1; }
+.bio { font-size: 0.82rem; line-height: 1.75; color: #444; }
+</style>
+</head>
+<body>
+<div class="grid">
+  <div class="cell cell-dark">
+    <div class="label">Name</div>
+    <div class="name-big" style="color:#fff; font-size:1.5rem; font-family:'Cormorant Garamond',serif; font-weight:700;">Gaia Gaudenzi</div>
+    <div style="margin-top:0.5rem; font-size:0.75rem; color:rgba(255,255,255,0.5);">PhD Candidate</div>
+  </div>
+  <div class="cell cell-teal cell-span2">
+    <div class="label">Navigation</div>
+    <nav><a href="#">About</a><a href="#">Research</a><a href="#">CV</a><a href="#">Teaching</a><a href="#">Contact</a></nav>
+  </div>
+
+  <div class="cell cell-span2">
+    <div class="label label-teal">Job Market Paper</div>
+    <h2>Your JMP Title: Policy and Behavior in Developing Economic Contexts</h2>
+    <p>This paper examines the causal effect of [intervention] on [outcome] using a randomized controlled trial in [country/context]. We find that [main result], with implications for [policy area]. Results are robust to alternative specifications.</p>
+  </div>
+  <div class="cell">
+    <div class="label label-teal">Fields</div>
+    <div style="margin-bottom:1rem;">
+      <div class="field-tag">Development Economics</div>
+      <div class="field-tag">Behavioral Economics</div>
+      <div class="field-tag">Public Economics</div>
+    </div>
+    <div class="label label-teal" style="margin-top:1rem;">Status</div>
+    <p style="font-size:0.8rem; color:#008080; font-weight:600;">On the Job Market 2025-26</p>
+  </div>
+
+  <div class="cell">
+    <div class="label label-teal">Institution</div>
+    <p>University of Maryland<br>Department of Economics</p>
+    <br>
+    <div class="label label-teal">Contact</div>
+    <a class="link" href="#">gaiagaudenzi9@gmail.com</a>
+    <a class="link" href="#">GitHub</a>
+    <a class="link" href="#">Twitter / X</a>
+  </div>
+  <div class="cell">
+    <div class="label label-teal">Bio</div>
+    <p class="bio">PhD student at University of Maryland. Former Predoctoral RA at the Becker Friedman Institute at University of Chicago and BRAC Bangladesh. Interested in development and behavioral economics.</p>
+  </div>
+  <div class="cell cell-dark">
+    <div class="big-num">3</div>
+    <div style="font-size:0.7rem; color:rgba(255,255,255,0.5); letter-spacing:0.1em; text-transform:uppercase; margin-top:0.25rem;">Working Papers</div>
+  </div>
+</div>
+</body>
+</html>
