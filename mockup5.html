@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mockup 5 - One Color Total Commitment</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,600;0,700;1,300;1,400&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body { background: #fff; color: #111; font-family: 'Source Sans 3', sans-serif; min-height: 100vh; }
+.sidebar { position: fixed; top: 0; left: 0; width: 260px; height: 100vh; background: #008080; color: #fff; padding: 3rem 2rem; display: flex; flex-direction: column; }
+.sidebar .name { font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-weight: 700; line-height: 1.1; margin-bottom: 0.3rem; }
+.sidebar .role { font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.65); margin-bottom: 2rem; }
+.sidebar nav { display: flex; flex-direction: column; gap: 0.1rem; flex: 1; }
+.sidebar nav a { font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none; color: rgba(255,255,255,0.7); padding: 0.5rem 0; border-bottom: 1px solid rgba(255,255,255,0.1); font-weight: 400; }
+.sidebar nav a:hover, .sidebar nav a.active { color: #fff; }
+.sidebar .contact { margin-top: auto; }
+.sidebar .contact a { font-size: 0.68rem; color: rgba(255,255,255,0.65); text-decoration: none; display: block; margin-bottom: 0.3rem; }
+.sidebar .contact a:hover { color: #fff; }
+.sidebar .institution { font-size: 0.65rem; color: rgba(255,255,255,0.5); letter-spacing: 0.05em; margin-bottom: 1.5rem; line-height: 1.6; }
+.main { margin-left: 260px; padding: 5rem 6rem; min-height: 100vh; }
+.section-tag { font-size: 0.6rem; letter-spacing: 0.2em; text-transform: uppercase; color: #008080; font-weight: 600; margin-bottom: 1rem; }
+h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(3rem, 5vw, 4.5rem); font-weight: 700; line-height: 1; letter-spacing: -0.01em; margin-bottom: 0.5rem; }
+.about-text { font-size: 0.95rem; color: #555; line-height: 1.85; font-weight: 300; max-width: 600px; margin-bottom: 3rem; }
+.teal-rule { width: 40px; height: 2px; background: #008080; margin: 2rem 0; }
+.jmp-box { border-left: 3px solid #008080; padding-left: 1.5rem; max-width: 600px; margin-bottom: 3rem; }
+.jmp-box .jmp-label { font-size: 0.6rem; letter-spacing: 0.18em; text-transform: uppercase; color: #008080; font-weight: 600; margin-bottom: 0.75rem; }
+.jmp-box .jmp-title { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 700; line-height: 1.25; color: #111; margin-bottom: 0.75rem; }
+.jmp-box .jmp-abstract { font-size: 0.85rem; color: #666; line-height: 1.8; font-weight: 300; }
+.fields { display: flex; gap: 1rem; flex-wrap: wrap; }
+.field-pill { border: 1px solid #008080; color: #008080; font-size: 0.65rem; letter-spacing: 0.08em; padding: 0.3rem 0.8rem; font-weight: 500; }
+</style>
+</head>
+<body>
+<aside class="sidebar">
+  <div class="name">Gaia<br>Gaudenzi</div>
+  <div class="role">PhD Candidate</div>
+  <div class="institution">University of Maryland<br>Department of Economics</div>
+  <nav>
+    <a href="#" class="active">About</a>
+    <a href="#">Research</a>
+    <a href="#">CV</a>
+    <a href="#">Teaching</a>
+    <a href="#">Contact</a>
+  </nav>
+  <div class="contact">
+    <a href="#">gaiagaudenzi9@gmail.com</a>
+    <a href="#">GitHub</a>
+    <a href="#">Twitter / X</a>
+    <a href="#">LinkedIn</a>
+  </div>
+</aside>
+
+<main class="main">
+  <div class="section-tag">About Me</div>
+  <h1>Hello there.</h1>
+  <div class="teal-rule"></div>
+  <div class="about-text">My name is Gaia Gaudenzi and I am currently a PhD student at the University of Maryland. I was a Predoctoral Research Assistant at the Becker Friedman Institute at the University of Chicago and at BRAC Bangladesh. I am interested in development economics and behavioral economics.</div>
+
+  <div class="jmp-box">
+    <div class="jmp-label">Job Market Paper</div>
+    <div class="jmp-title">Your JMP Title: A Study of Policy and Behavior in Developing Economic Contexts</div>
+    <div class="jmp-abstract">This paper examines the causal effect of [intervention] on [outcome] using a randomized controlled trial. We find evidence of [main result] with implications for [policy area].</div>
+  </div>
+
+  <div class="section-tag">Research Fields</div>
+  <div class="fields">
+    <div class="field-pill">Development Economics</div>
+    <div class="field-pill">Behavioral Economics</div>
+    <div class="field-pill">Public Economics</div>
+  </div>
+</main>
+</body>
+</html>
