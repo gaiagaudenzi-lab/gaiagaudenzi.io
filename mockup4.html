@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mockup 4 - Typographer's Minimal</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=JetBrains+Mono:wght@300;400&family=Source+Sans+3:wght@300;400&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body { background: #fff; color: #111; font-family: 'Source Sans 3', sans-serif; min-height: 100vh; }
+.page { max-width: 780px; margin: 0 auto; padding: 5rem 2rem; }
+.mono { font-family: 'JetBrains Mono', monospace; }
+.top-line { width: 100%; height: 2px; background: #111; margin-bottom: 0.5rem; }
+.teal-line { width: 60px; height: 2px; background: #008080; margin-bottom: 3rem; }
+.eyebrow { font-family: 'JetBrains Mono', monospace; font-size: 0.65rem; color: #008080; letter-spacing: 0.15em; margin-bottom: 0.75rem; }
+h1 { font-family: 'Playfair Display', serif; font-size: clamp(3.5rem, 8vw, 6rem); font-weight: 700; line-height: 1; letter-spacing: -0.02em; margin-bottom: 0.3rem; }
+.name-sub { font-family: 'Playfair Display', serif; font-style: italic; font-size: clamp(1.5rem, 4vw, 2.5rem); color: #008080; margin-bottom: 2.5rem; }
+.meta-line { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; color: #888; letter-spacing: 0.08em; border-left: 2px solid #008080; padding-left: 1rem; margin-bottom: 3rem; line-height: 2; }
+nav { display: flex; gap: 2.5rem; margin-bottom: 4rem; }
+nav a { font-family: 'JetBrains Mono', monospace; font-size: 0.65rem; letter-spacing: 0.12em; text-transform: uppercase; text-decoration: none; color: #999; }
+nav a:hover { color: #008080; }
+.section-label { font-family: 'JetBrains Mono', monospace; font-size: 0.6rem; color: #008080; letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 1rem; }
+.divider { border: none; border-top: 1px solid #eee; margin: 2.5rem 0; }
+.jmp-title { font-family: 'Playfair Display', serif; font-size: 1.5rem; font-weight: 700; line-height: 1.3; color: #111; margin-bottom: 1rem; }
+.abstract { font-size: 0.9rem; color: #555; line-height: 1.85; font-weight: 300; }
+.two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; margin-top: 2.5rem; }
+.contact a { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; color: #008080; text-decoration: none; display: block; margin-bottom: 0.4rem; }
+.fields p { font-size: 0.85rem; color: #444; line-height: 2; }
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="top-line"></div>
+  <div class="teal-line"></div>
+
+  <div class="eyebrow">PhD Candidate &nbsp;/&nbsp; Economics &nbsp;/&nbsp; 2025-26 Job Market</div>
+  <h1>Gaia</h1>
+  <div class="name-sub">Gaudenzi</div>
+
+  <div class="meta-line">
+    University of Maryland &nbsp;&middot;&nbsp; Dept. of Economics<br>
+    Development Economics &nbsp;&middot;&nbsp; Behavioral Economics<br>
+    Available for Interviews
+  </div>
+
+  <nav>
+    <a href="#">About</a>
+    <a href="#">Research</a>
+    <a href="#">CV</a>
+    <a href="#">Teaching</a>
+    <a href="#">Contact</a>
+  </nav>
+
+  <div class="section-label">Job Market Paper</div>
+  <div class="jmp-title">Your JMP Title: A Causal Study of Policy and Behavior in Developing Contexts</div>
+  <div class="abstract">This paper examines the causal effect of [intervention] on [outcome] using a randomized controlled trial in [country/context]. We find that [main result], with implications for [policy area]. Results are robust to alternative specifications and placebo tests.</div>
+
+  <hr class="divider">
+
+  <div class="two-col">
+    <div class="contact">
+      <div class="section-label">Contact</div>
+      <a href="#">gaiagaudenzi9@gmail.com</a>
+      <a href="#">github.com/gaiagaudenzi-lab</a>
+      <a href="#">twitter.com/GaudenziGaia</a>
+    </div>
+    <div class="fields">
+      <div class="section-label">Research Fields</div>
+      <p>Primary &mdash; Development Economics<br>Secondary &mdash; Behavioral Economics<br>Secondary &mdash; Public Economics</p>
+    </div>
+  </div>
+</div>
+</body>
+</html>
