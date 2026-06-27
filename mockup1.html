@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mockup 1 – The Bold Name</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,700;1,400&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #fff; color: #111; font-family: 'Source Sans 3', sans-serif; min-height: 100vh; }
+
+      nav { display: flex; justify-content: flex-end; padding: 2rem 4rem; gap: 2.5rem; }
+  nav a { font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; text-decoration: none; color: #555; font-weight: 600; }
+  nav a:hover { color: #008080; }
+
+  .hero { padding: 2rem 4rem 1rem; border-top: 2px solid #008080; }
+  .hero h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(5rem, 14vw, 11rem); font-weight: 700; line-height: 0.9; letter-spacing: -0.02em; color: #111; }
+  .hero h1 span { color: #008080; }
+
+  .tagline { padding: 1.5rem 4rem; display: flex; align-items: center; gap: 1.5rem; }
+  .tagline .line { flex: 1; height: 1px; background: #ddd; }
+    .tagline p { font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase; color: #888; white-space: nowrap; }
+
+  .content { display: grid; grid-template-columns: 1fr 2fr; gap: 4rem; padding: 2rem 4rem 4rem; }
+  .sidebar { }
+      .sidebar .label { font-size: 0.65rem; letter-spacing: 0.15em; text-transform: uppercase; color: #008080; font-weight: 600; margin-bottom: 0.5rem; }
+  .sidebar p { font-size: 0.9rem; color: #444; line-height: 1.6; margin-bottom: 1.5rem; }
+  .sidebar a { display: block; font-size: 0.8rem; color: #008080; text-decoration: none; margin-bottom: 0.3rem; }
+
+  .main-content .jmp-label { font-size: 0.65rem; letter-spacing: 0.15em; text-transform: uppercase; color: #008080; font-weight: 600; margin-bottom: 0.75rem; }
+  .main-content .jmp-title { font-family: 'Cormorant Garamond', serif; font-size: 1.9rem; font-weight: 700; line-height: 1.2; color: #111; margin-bottom: 1rem; }
+  .main-content .jmp-abstract { font-size: 0.9rem; color: #555; line-height: 1.8; }
+  .teal-bar { width: 40px; height: 3px; background: #008080; margin-bottom: 1.5rem; }
+</style>
+  </head>
+  <body>
+    <nav>
+      <a href="#">About</a>
+      <a href="#">Research</a>
+      <a href="#">CV</a>
+      <a href="#">Teaching</a>
+      <a href="#">Contact</a>
+    </nav>
+
+    <div class="hero">
+      <h1>Gaia<br><span>Gaudenzi</span></h1>
+    </div>
+
+    <div class="tagline">
+      <div class="line"></div>
+      <p>PhD Candidate · University of Maryland · Development & Behavioral Economics</p>
+      <div class="line"></div>
+    </div>
+
+    <div class="content">
+      <div class="sidebar">
+        <div class="label">Affiliations</div>
+        <p>University of Maryland<br>Dept. of Economics</p>
+      <div class="label">Fields</div>
+      <p>Development Economics<br>Behavioral Economics</p>
+        <div class="label">Contact</div>
+        <a href="#">gaiagaudenzi9@gmail.com</a>
+        <a href="#">GitHub</a>
+        <a href="#">Twitter / X</a>
+        <a href="#">LinkedIn</a>
+      </div>
+      <div class="main-content">
+        <div class="jmp-label">Job Market Paper</div>
+      <div class="teal-bar"></div>
+      <div class="jmp-title">Your Job Market Paper Title Goes Here: A Study of Economic Behavior and Policy</div>
+        <div class="jmp-abstract">Abstract: This paper examines the causal effect of [intervention] on [outcome] using a randomized controlled trial in [context]. We find that [main result], with implications for [policy area]. Results are robust to [robustness checks].</div>
+    </div>
+  </div>
+</body>
+</html>
