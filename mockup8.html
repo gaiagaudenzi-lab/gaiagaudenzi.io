@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gaia Gaudenzi</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: #fff;
+  color: #1a1a1a;
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* ── NAV ── */
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.2rem;
+  padding: 1.1rem 2rem;
+  border-bottom: 1px solid #eee;
+}
+nav a {
+  font-size: 0.88rem;
+  text-decoration: none;
+  color: #444;
+  padding: 0.25rem 0.6rem;
+  border-radius: 4px;
+  transition: color 0.15s;
+}
+nav a:hover { color: #1a1a1a; }
+nav a.active { color: #2a5c45; font-weight: 500; }
+
+/* ── PAGE ── */
+.page {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 3.5rem 2rem 4rem;
+}
+
+/* ── HEADER ── */
+.name-heading {
+  font-size: 2.4rem;
+  font-weight: 300;
+  letter-spacing: -0.01em;
+  margin-bottom: 0.3rem;
+  line-height: 1;
+}
+.name-heading strong {
+  font-weight: 700;
+}
+.affiliation-line {
+  font-size: 0.88rem;
+  color: #2a5c45;
+  margin-bottom: 1.8rem;
+}
+.affiliation-line span {
+  color: #555;
+}
+
+/* ── BIO + PHOTO ── */
+.bio-section {
+  display: grid;
+  grid-template-columns: 1fr 220px;
+  gap: 3rem;
+  align-items: start;
+  margin-bottom: 3rem;
+}
+.bio-text p {
+  font-size: 0.92rem;
+  line-height: 1.8;
+  color: #333;
+  margin-bottom: 1rem;
+}
+.bio-text p:last-child { margin-bottom: 0; }
+
+.photo-col {}
+.photo-col img {
+  width: 100%;
+  display: block;
+  border: 1px solid #e0e0e0;
+}
+.photo-placeholder {
+  width: 100%;
+  aspect-ratio: 3/4;
+  background: #d4ede2;
+  border: 1px solid #b8dece;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  color: #2a5c45;
+  letter-spacing: 0.05em;
+}
+.address-block {
+  margin-top: 0.9rem;
+  font-family: 'Courier New', monospace;
+  font-size: 0.78rem;
+  color: #444;
+  line-height: 1.8;
+}
+
+/* ── SOCIAL LINKS ── */
+.social-row {
+  display: flex;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
+  padding-top: 1.2rem;
+  border-top: 1px solid #eee;
+}
+.social-row a {
+  font-size: 0.82rem;
+  color: #2a5c45;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+.social-row a:hover { text-decoration: underline; }
+
+/* ── NEWS ── */
+.news-section {
+  border-top: 1px solid #eee;
+  padding-top: 2rem;
+}
+.news-section h2 {
+  font-size: 1.5rem;
+  font-weight: 300;
+  margin-bottom: 1.5rem;
+  color: #1a1a1a;
+}
+.news-item {
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  gap: 1rem;
+  padding: 0.8rem 0;
+  border-bottom: 1px solid #f0f0f0;
+  align-items: baseline;
+}
+.news-date {
+  font-size: 0.8rem;
+  color: #888;
+  font-weight: 400;
+  white-space: nowrap;
+}
+.news-text {
+  font-size: 0.88rem;
+  color: #333;
+  line-height: 1.6;
+}
+.news-text a {
+  color: #2a5c45;
+  text-decoration: none;
+}
+.news-text a:hover { text-decoration: underline; }
+
+/* ── PAPERS SECTION ── */
+.papers-section {
+  margin-top: 3rem;
+}
+.papers-section h2 {
+  font-size: 1.5rem;
+  font-weight: 300;
+  margin-bottom: 1.5rem;
+  color: #1a1a1a;
+}
+.paper-item {
+  padding: 1rem 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+.paper-item .paper-title {
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: #1a1a1a;
+  margin-bottom: 0.25rem;
+}
+.paper-item .paper-authors {
+  font-size: 0.82rem;
+  color: #666;
+  margin-bottom: 0.2rem;
+}
+.paper-item .paper-venue {
+  font-size: 0.8rem;
+  color: #2a5c45;
+  font-style: italic;
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="#" class="active">about</a>
+  <a href="#">blog</a>
+  <a href="#">publications</a>
+  <a href="#">cv</a>
+  <a href="#">resources</a>
+  <a href="#">stata training</a>
+</nav>
+
+<div class="page">
+
+  <!-- NAME + AFFILIATION -->
+  <h1 class="name-heading"><strong>Gaia</strong> Gaudenzi</h1>
+  <div class="affiliation-line">
+    University of Maryland, Department of Economics.
+    <span>College Park, MD.</span>
+  </div>
+
+  <!-- BIO + PHOTO -->
+  <div class="bio-section">
+    <div class="bio-text">
+      <p>
+        I am a PhD student in Economics at the University of Maryland. Before joining UMD,
+        I was a Predoctoral Research Assistant at the Becker Friedman Institute at the
+        University of Chicago, and a Research Assistant at the Laboratory for Effective
+        Anti-Poverty Policies (LEAP) at Bocconi University and at BRAC Bangladesh.
+      </p>
+      <p>
+        I am interested in <a href="#" style="color:#2a5c45;">development economics</a>
+        and <a href="#" style="color:#2a5c45;">behavioral economics</a>,
+        with a focus on gender, poverty, and field experiments in the Global South.
+      </p>
+
+      <div class="social-row">
+        <a href="mailto:gaiagaudenzi9@gmail.com">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 7 10-7"/></svg>
+          email
+        </a>
+        <a href="https://x.com/GaudenziGaia">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.734l7.73-8.835L1.254 2.25H8.08l4.253 5.622z"/></svg>
+          twitter
+        </a>
+        <a href="https://github.com/gaiagaudenzi-lab">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/></svg>
+          github
+        </a>
+        <a href="#">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+          cv
+        </a>
+      </div>
+    </div>
+
+    <div class="photo-col">
+      <img src="/assets/images/bio-photo.png" alt="Gaia Gaudenzi"
+           onerror="this.outerHTML='<div class='photo-placeholder'>photo</div>'">
+      <div class="address-block">
+        Department of Economics<br>
+        University of Maryland<br>
+        College Park, MD 20742
+      </div>
+    </div>
+  </div>
+
+  <!-- WORKING PAPERS -->
+  <div class="papers-section">
+    <h2>working papers</h2>
+
+    <div class="paper-item">
+      <div class="paper-title">Body weight signaling and labor market outcomes: a gender extension</div>
+      <div class="paper-authors">Gaia Gaudenzi, [coauthor]</div>
+      <div class="paper-venue">Working paper &middot; 2025</div>
+    </div>
+
+    <div class="paper-item">
+      <div class="paper-title">Behavioral responses to conditional cash transfers in rural Bangladesh</div>
+      <div class="paper-authors">Gaia Gaudenzi, [coauthor]</div>
+      <div class="paper-venue">In progress &middot; 2024</div>
+    </div>
+  </div>
+
+  <!-- NEWS -->
+  <div class="news-section" style="margin-top:3rem;">
+    <h2>news</h2>
+
+    <div class="news-item">
+      <div class="news-date">2025</div>
+      <div class="news-text">Presented working paper at [Conference Name].</div>
+    </div>
+    <div class="news-item">
+      <div class="news-date">2024</div>
+      <div class="news-text">Started PhD program at the University of Maryland.</div>
+    </div>
+    <div class="news-item">
+      <div class="news-date">2023</div>
+      <div class="news-text">Completed predoctoral fellowship at the <a href="#">Becker Friedman Institute</a>, University of Chicago.</div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
