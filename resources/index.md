@@ -1,6 +1,5 @@
 ---
-layout: single
-author_profile: true
+layout: page
 title: Useful resources for wannabe Economists conducting Field Experiments
 ---
 
