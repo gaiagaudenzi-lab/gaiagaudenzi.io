@@ -19,27 +19,27 @@ It's not a polished city, and that's exactly what makes it so fascinating. Every
 
 <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin: 2rem 0;">
   <div style="overflow: hidden; border-radius: 6px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
-    <img src="/assets/images/BD1.JPG" alt="Old Dhaka Scene 1" style="width: 100%; height: 240px; object-fit: cover; display: block;">
+    <img src="{{ "/assets/images/BD1.JPG" | relative_url }}" alt="Old Dhaka Scene 1" style="width: 100%; height: 240px; object-fit: cover; display: block;">
   </div>
   <div style="overflow: hidden; border-radius: 6px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
-    <img src="/assets/images/BD2.jpg" alt="Old Dhaka Scene 2" style="width: 100%; height: 240px; object-fit: cover; display: block;">
+    <img src="{{ "/assets/images/BD2.jpg" | relative_url }}" alt="Old Dhaka Scene 2" style="width: 100%; height: 240px; object-fit: cover; display: block;">
   </div>
   <div style="overflow: hidden; border-radius: 6px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
-    <img src="/assets/images/BD3.JPG" alt="Old Dhaka Scene 3" style="width: 100%; height: 240px; object-fit: cover; display: block;">
+    <img src="{{ "/assets/images/BD3.JPG" | relative_url }}" alt="Old Dhaka Scene 3" style="width: 100%; height: 240px; object-fit: cover; display: block;">
   </div>
   <div style="overflow: hidden; border-radius: 6px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
-    <img src="/assets/images/BD4.JPG" alt="Old Dhaka Scene 4" style="width: 100%; height: 240px; object-fit: cover; display: block;">
+    <img src="{{ "/assets/images/BD4.JPG" | relative_url }}" alt="Old Dhaka Scene 4" style="width: 100%; height: 240px; object-fit: cover; display: block;">
   </div>
   <div style="overflow: hidden; border-radius: 6px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
-    <img src="/assets/images/BD5.jpg" alt="Old Dhaka Scene 5" style="width: 100%; height: 240px; object-fit: cover; display: block;">
+    <img src="{{ "/assets/images/BD5.jpg" | relative_url }}" alt="Old Dhaka Scene 5" style="width: 100%; height: 240px; object-fit: cover; display: block;">
   </div>
   <div style="overflow: hidden; border-radius: 6px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
-    <img src="/assets/images/BD6.JPG" alt="Old Dhaka Scene 6" style="width: 100%; height: 240px; object-fit: cover; display: block;">
+    <img src="{{ "/assets/images/BD6.JPG" | relative_url }}" alt="Old Dhaka Scene 6" style="width: 100%; height: 240px; object-fit: cover; display: block;">
   </div>
   <div style="overflow: hidden; border-radius: 6px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
-    <img src="/assets/images/BD7.JPG" alt="Old Dhaka Scene 7" style="width: 100%; height: 240px; object-fit: cover; display: block;">
+    <img src="{{ "/assets/images/BD7.JPG" | relative_url }}" alt="Old Dhaka Scene 7" style="width: 100%; height: 240px; object-fit: cover; display: block;">
   </div>
   <div style="overflow: hidden; border-radius: 6px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
-    <img src="/assets/images/BD8.JPG" alt="Old Dhaka Scene 8" style="width: 100%; height: 240px; object-fit: cover; display: block;">
+    <img src="{{ "/assets/images/BD8.JPG" | relative_url }}" alt="Old Dhaka Scene 8" style="width: 100%; height: 240px; object-fit: cover; display: block;">
   </div>
 </div>
