@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gaia Gaudenzi</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --deep-forest: #1b3a2d;
+  --teal-dark:   #2a5c45;
+  --teal-mid:    #3a7d5e;
+  --teal-light:  #a8d5be;
+  --teal-wash:   #d4ede2;
+  --near-black:  #181c1a;
+  --off-white:   #f2f1ed;
+  --text-dark:   #1a1a1a;
+  --text-muted:  #5a6360;
+}
+
+body {
+  background: #111;
+  font-family: 'Inter', sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── TOP NAV ── */
+.topnav {
+  background: var(--near-black);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2.5rem;
+  height: 52px;
+  flex-shrink: 0;
+}
+.topnav .logo {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #fff;
+  letter-spacing: 0.02em;
+}
+.topnav nav {
+  display: flex;
+  gap: 2rem;
+}
+.topnav nav a {
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: rgba(255,255,255,0.55);
+  font-weight: 500;
+}
+.topnav nav a.active {
+  color: var(--teal-mid);
+}
+.topnav nav a:hover {
+  color: rgba(255,255,255,0.9);
+}
+
+/* ── MAIN LAYOUT ── */
+.layout {
+  display: flex;
+  flex: 1;
+  min-height: 0;
+}
+
+/* ── LEFT SIDEBAR ── */
+.sidebar {
+  width: 280px;
+  flex-shrink: 0;
+  background: var(--teal-dark);
+  display: flex;
+  flex-direction: column;
+  padding: 2.5rem 2rem 2rem;
+  position: relative;
+}
+.photo-wrap {
+  width: 160px;
+  height: 200px;
+  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+  border: 2px solid var(--teal-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1.5rem auto 2.5rem;
+  background: var(--teal-mid);
+  overflow: hidden;
+}
+.photo-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.photo-placeholder {
+  color: rgba(255,255,255,0.45);
+  font-size: 0.75rem;
+  text-align: center;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+}
+.sidebar-name {
+  margin-top: auto;
+  padding-top: 1rem;
+}
+.sidebar-name .first {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 1.3rem;
+  color: var(--teal-wash);
+  font-weight: 400;
+  line-height: 1;
+  margin-bottom: 0.1rem;
+}
+.sidebar-name .last {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: -0.01em;
+  line-height: 1;
+}
+
+/* ── RIGHT CONTENT ── */
+.content {
+  flex: 1;
+  background: var(--off-white);
+  padding: 2.5rem 3.5rem 3rem;
+  overflow-y: auto;
+}
+
+.affiliation {
+  font-size: 0.65rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--teal-mid);
+  font-weight: 600;
+  margin-bottom: 1.2rem;
+}
+
+.tagline {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 1.9rem;
+  line-height: 1.35;
+  color: var(--text-dark);
+  margin-bottom: 1.1rem;
+  max-width: 620px;
+}
+.tagline .highlight {
+  color: var(--teal-mid);
+}
+
+.teal-rule {
+  width: 36px;
+  height: 2.5px;
+  background: var(--teal-mid);
+  margin-bottom: 1.3rem;
+  border-radius: 2px;
+}
+
+.bio {
+  font-size: 0.9rem;
+  color: #3a3a3a;
+  line-height: 1.8;
+  max-width: 620px;
+  margin-bottom: 1.5rem;
+  font-weight: 400;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+.tag {
+  background: var(--teal-wash);
+  color: var(--teal-dark);
+  font-size: 0.72rem;
+  padding: 0.3rem 0.85rem;
+  border-radius: 999px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+.divider {
+  border: none;
+  border-top: 1px solid #d8d6d0;
+  margin: 0.5rem 0 1.3rem;
+  max-width: 620px;
+}
+
+.social-links {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 2.5rem;
+}
+.social-links a {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-weight: 400;
+}
+.social-links a:hover { color: var(--teal-mid); }
+.social-links a svg { width: 14px; height: 14px; opacity: 0.7; }
+
+/* ── PAPERS ── */
+.section-heading {
+  font-size: 0.62rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--teal-dark);
+  font-weight: 600;
+  margin-bottom: 1.2rem;
+}
+
+.paper {
+  display: flex;
+  gap: 0.9rem;
+  align-items: flex-start;
+  margin-bottom: 1.4rem;
+  max-width: 620px;
+}
+.paper-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--teal-mid);
+  flex-shrink: 0;
+  margin-top: 0.35rem;
+}
+.paper-body {}
+.paper-title {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  line-height: 1.4;
+  margin-bottom: 0.2rem;
+}
+.paper-meta {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin-bottom: 0.4rem;
+}
+.paper-badge {
+  display: inline-block;
+  font-size: 0.65rem;
+  padding: 0.15rem 0.55rem;
+  border-radius: 4px;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  background: var(--teal-wash);
+  color: var(--teal-dark);
+}
+.paper-badge.progress {
+  background: #e8e4d8;
+  color: #6b6040;
+}
+</style>
+</head>
+<body>
+
+<!-- TOP NAV -->
+<header class="topnav">
+  <div class="logo">GG</div>
+  <nav>
+    <a href="#" class="active">About</a>
+    <a href="#">Research</a>
+    <a href="#">CV</a>
+    <a href="#">Blog</a>
+    <a href="#">Resources</a>
+  </nav>
+</header>
+
+<!-- LAYOUT -->
+<div class="layout">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="photo-wrap">
+      <img src="/assets/images/bio-photo.png" alt="Gaia Gaudenzi"
+           onerror="this.style.display='none'; this.parentNode.querySelector('.photo-placeholder').style.display='block';">
+      <div class="photo-placeholder" style="display:none;">your<br>photo</div>
+    </div>
+    <div class="sidebar-name">
+      <div class="first">Gaia</div>
+      <div class="last">Gaudenzi</div>
+    </div>
+  </aside>
+
+  <!-- MAIN CONTENT -->
+  <main class="content">
+    <div class="affiliation">University of Maryland &nbsp;&middot;&nbsp; Applied Economics</div>
+
+    <div class="tagline">
+      Development economist working on
+      <span class="highlight">gender and poverty</span>
+      in the Global South.
+    </div>
+
+    <div class="teal-rule"></div>
+
+    <p class="bio">
+      Second-year PhD student in Applied Economics and Development. Previously
+      pre-doctoral RA at the Becker Friedman Institute (UChicago), RA at LEAP
+      (Bocconi), and BRAC Bangladesh.
+    </p>
+
+    <div class="tags">
+      <span class="tag">Development economics</span>
+      <span class="tag">Behavioral economics</span>
+      <span class="tag">Gender</span>
+      <span class="tag">Field experiments</span>
+    </div>
+
+    <hr class="divider">
+
+    <div class="social-links">
+      <a href="mailto:gaiagaudenzi9@gmail.com">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 7 10-7"/></svg>
+        Email
+      </a>
+      <a href="https://x.com/GaudenziGaia">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.734l7.73-8.835L1.254 2.25H8.08l4.253 5.622z"/></svg>
+        Twitter
+      </a>
+      <a href="https://github.com/gaiagaudenzi-lab">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/></svg>
+        GitHub
+      </a>
+      <a href="#">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+        CV
+      </a>
+    </div>
+
+    <!-- PAPERS -->
+    <div class="section-heading">Working Papers</div>
+
+    <div class="paper">
+      <div class="paper-dot"></div>
+      <div class="paper-body">
+        <div class="paper-title">Body weight signaling and labor market outcomes: a gender extension</div>
+        <div class="paper-meta">with [coauthor] &middot; 2025</div>
+        <span class="paper-badge">Working paper</span>
+      </div>
+    </div>
+
+    <div class="paper">
+      <div class="paper-dot"></div>
+      <div class="paper-body">
+        <div class="paper-title">Behavioral responses to conditional cash transfers in rural Bangladesh</div>
+        <div class="paper-meta">with [coauthor] &middot; 2024</div>
+        <span class="paper-badge progress">In progress</span>
+      </div>
+    </div>
+
+  </main>
+</div>
+
+</body>
+</html>
