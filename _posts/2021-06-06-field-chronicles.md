@@ -2,7 +2,7 @@
 layout: post
 title: "The Splendor of Old Dhaka"
 date: 2021-06-06
-image: /gaiagaudenzi.io/assets/images/BD2.jpg
+image: /assets/images/BD2.jpg
 header:
   image: /gaiagaudenzi.io/assets/images/BD1.JPG
   caption: "Old Dhaka, Bangladesh"
