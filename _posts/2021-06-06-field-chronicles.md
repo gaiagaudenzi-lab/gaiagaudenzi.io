@@ -2,10 +2,10 @@
 layout: post
 title: "The Splendor of Old Dhaka"
 date: 2021-06-06
+image: /gaiagaudenzi.io/assets/images/BD2.jpg
 header:
   image: /gaiagaudenzi.io/assets/images/BD1.JPG
   caption: "Old Dhaka, Bangladesh"
-  teaser: /gaiagaudenzi.io/assets/images/BD2.jpg
 ---
 
 Old Dhaka is the kind of place that overwhelms your senses—in the best way. The streets are packed with rickshaws, vendors, porters, and shoppers, all moving together in what somehow feels like organized chaos.
