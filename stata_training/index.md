@@ -2,7 +2,7 @@
 # You don't need to edit this file, it's empty on purpose.
 # Edit theme's home layout instead if you wanna make some changes
 # See: https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-layout: single
+layout: page
 title: Stata training
 ---
 
@@ -64,7 +64,7 @@ summarize [varlist] [if] [in] [weight] [, options]
 ```
 
 
-Let’s start talking about how you can actually load datasets on Stata. The extension stata uses for its file is .dta, so the name of a dataset in Stata format will look like this: dataset.dta. However, you can import a wide variety of files with different formats into Stata (Excel, csv etc.)
+Letâs start talking about how you can actually load datasets on Stata. The extension stata uses for its file is .dta, so the name of a dataset in Stata format will look like this: dataset.dta. However, you can import a wide variety of files with different formats into Stata (Excel, csv etc.)
 
 ## <a name="directories">Directories</a>
 
@@ -93,16 +93,16 @@ It will return the directory Stata is in. In my case now it is:
 "/Users/gaiagaudenzi/Documents/Stata/dataset.dta"
 ```
 
-To change directory (in this example I change from “/Users/gaiagaudenzi/Documents/Stata” to “/Users/gaiagaudenzi/Documents/Datasets”)
+To change directory (in this example I change from â/Users/gaiagaudenzi/Documents/Stataâ to â/Users/gaiagaudenzi/Documents/Datasetsâ)
 
 ```stata
-cd “/Users/gaiagaudenzi/Documents/Datasets”
+cd â/Users/gaiagaudenzi/Documents/Datasetsâ
 ```
 
-To create directories (this will create folders into your laptop! In this example I create the folder “NewDirectory”)
+To create directories (this will create folders into your laptop! In this example I create the folder âNewDirectoryâ)
 
 ```stata
-mkdir “/Users/gaiagaudenzi/Documents/NewDirectory”
+mkdir â/Users/gaiagaudenzi/Documents/NewDirectoryâ
 ```
 
 ## <a name="importing">Importing data from Stata and from external sources (.xlsx, .csv, etc.)</a>
@@ -110,7 +110,7 @@ mkdir “/Users/gaiagaudenzi/Documents/NewDirectory”
 We have already seen that to load a dataset into Stata that is already in .dta format, the command is `use` followed by the directory and the name of the file. What if we want to import an Excel file?
 
 ```stata
-import excel using “yourdirectory/SampleExcelFile.xlsx”, clear
+import excel using âyourdirectory/SampleExcelFile.xlsxâ, clear
 ```
 > N.B. Stata only allows to open one variable at a time. This means that you will always have to specify the option `clear` after the comma as in the example above. Otherwise Stata will give you an error of this type:
 
@@ -178,7 +178,7 @@ It might not seem so at the moment, but macros are very powerful tools we will u
 
 First of all, let's see which description Stata offers for them:
 
->global assigns strings to specified global macro names (mnames). local assigns strings to local macro names (lclnames). Both double quotes (" and ") and compound double quotes (‘" and "’) are allowed
+>global assigns strings to specified global macro names (mnames). local assigns strings to local macro names (lclnames). Both double quotes (" and ") and compound double quotes (â" and "â) are allowed
 
 This might look very obscure to you, but I promise it will be clear in a moment. 
 
@@ -622,20 +622,20 @@ g has_var=regexm(var,"[Vv]ar")
 >Little dictionary on Stata Regular expressions useful to handle string variables
 >
 > **Counting**     
-> `*`	Asterisk means “match zero or more” of the preceding expression.   
-> `+`	Plus sign means “match one or more” of the preceding expression.  
-> `?`	Question mark means “match either zero or one” of the preceding expression.
+> `*`	Asterisk means âmatch zero or moreâ of the preceding expression.   
+> `+`	Plus sign means âmatch one or moreâ of the preceding expression.  
+> `?`	Question mark means âmatch either zero or oneâ of the preceding expression.
 >	
 > **Characters**
-> `a–z`	The dash operator means “match a range of characters or numbers”. The “a” and “z” are merely an example. It could also be 0–9, 5–8, F–M, etc.     
-> `.`	Period means “match any character”.  
+> `aâz`	The dash operator means âmatch a range of characters or numbersâ. The âaâ and âzâ are merely an example. It could also be 0â9, 5â8, FâM, etc.     
+> `.`	Period means âmatch any characterâ.  
 > `/`	A backslash is used as an escape character to match characters that would otherwise be interpreted as a regular-expression operator.
 > 	
 > **Anchors**  
-> `^`	When placed at the beginning of a regular expression, the caret means “match expression at beginning of string”. This character can be thought of as an “anchor” character since it does not directly match a character, only the location of the match.  
-> `$`	When the dollar sign is placed at the end of a regular expression, it means “match expression at end of string”. This is the other anchor character.
+> `^`	When placed at the beginning of a regular expression, the caret means âmatch expression at beginning of stringâ. This character can be thought of as an âanchorâ character since it does not directly match a character, only the location of the match.  
+> `$`	When the dollar sign is placed at the end of a regular expression, it means âmatch expression at end of stringâ. This is the other anchor character.
 > **Groups**
-> `|`	The pipe character signifies a logical “or” that is often used in character sets (see square brackets below).  
+> `|`	The pipe character signifies a logical âorâ that is often used in character sets (see square brackets below).  
 > `[ ]`	Square brackets denote a set of allowable characters/expressions to use in matching, such as [a-zA-Z0-9] for all alphanumeric characters.  
 > `( )`	Parentheses must match and denote a subexpression group.
 
@@ -733,7 +733,7 @@ sample 200, count
 
 ![graph_errorbar]({{site.url}}/images/graph_errorbar.png)
 
-Creating a graph with error bar in Stata involves some transformation of the dataset. If you are not familiar with collapse or reshape, please visit the corresponding section. Here we would like to create a graph with the corresponding error bars. Let’s use the built-in dataset ``city temp.dta```
+Creating a graph with error bar in Stata involves some transformation of the dataset. If you are not familiar with collapse or reshape, please visit the corresponding section. Here we would like to create a graph with the corresponding error bars. Letâs use the built-in dataset ``city temp.dta```
 to show how to build a graph with error bar. 
 ```stata
 * Load data
@@ -754,7 +754,7 @@ generate hi_temp = mean_temp + invttail(n-1,0.025)*(sd_temp / sqrt(n_temp))
 generate lower_temp = mean_temp - invttail(n-1,0.025)*(sd_temp / sqrt(n_temp))
 
 ```
-Now we generate a “fake” x-axis, which will allow us to plot the bars exactly in the order we want
+Now we generate a âfakeâ x-axis, which will allow us to plot the bars exactly in the order we want
 ```
 generate xaxis = 1 if region == 1 & month == "jan"
 replace  xaxis = 2 if region == 1 & month == "jul"
