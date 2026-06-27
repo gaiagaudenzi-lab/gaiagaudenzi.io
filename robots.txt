@@ -1,2 +1,4 @@
 User-agent: *
 Allow: /
+
+Sitemap: https://gaiagaudenzi-lab.github.io/gaiagaudenzi.io/sitemap.xml
