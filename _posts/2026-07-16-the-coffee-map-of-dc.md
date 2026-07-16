@@ -15,13 +15,13 @@ During my first year of graduate school, coffee shops basically saved my life. I
 
 So, this is my highly subjective, non-exhaustive, and always-updating map of DC spots where you can work, study, people-watch, and pretend that buying a latte counts as renting an office.
 
-My criteria are simple: natural light, outlets, decent coffee, enough space, and vibes strong enough to make me open my laptop.
+My criteria are simple: relaxed vibe, natural light, enough space, decent coffee, outlets. (in this order)
 
 ## The Potter’s House — The One That Got Away
 
 My favorite place in DC, now sadly closed. You studied surrounded by books, the staff were lovely, and there was space, light, outlets, and genuinely perfect vibes.
 
-I studied almost all of my first-semester econometrics on the bench by the window. I loved this place so much that it influenced where I chose to live, which is perhaps too much power to give a café.
+I studied almost all of my first-semester econometrics on the bench by the window. I loved this place so much that after studying there once, I decided I wanted to live in the neighborhood. Very normal way to choose an apartment. I also met a lot of cool PhD people there, probably because it was the kind of coffee shop where strangers actually talked to each other. Or maybe that is just DC, where everyone either has a PhD or is currently suffering through one.
 
 **Coffee:** 4/5
 **Light:** 5/5
