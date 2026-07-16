@@ -2,7 +2,7 @@
 layout: post
 title: "The Coffee Map of DC"
 date: 2026-07-16
-image: /assets/images/b3.jpg
+image: /assets/images/b3.png
 ---
 
 # The Coffee Map of DC (actual map below)
